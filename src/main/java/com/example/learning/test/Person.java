@@ -7,6 +7,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Person {
+    private long id;
     private String name;
     private JobPosition jobPosition;
 
