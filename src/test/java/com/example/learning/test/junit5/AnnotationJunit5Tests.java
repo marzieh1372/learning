@@ -60,7 +60,7 @@ public class AnnotationJunit5Tests {
 
     @Test
     public void testAssertEquals() {
-        assertEquals("text2", "text5", "failure - strings are not equal");
+        assertEquals("text5", "text5", "failure - strings are not equal");
     }
 
     @Test

@@ -4,10 +4,15 @@ import com.example.learning.test.JobPosition;
 import com.example.learning.test.JobService;
 import com.example.learning.test.Person;
 import com.example.learning.test.UnemployeePerson;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
+import org.mockito.junit.MockitoJUnit;
+import org.mockito.junit.MockitoRule;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.Optional;
@@ -28,6 +33,7 @@ public class JobServiceUnitTest {
     @InjectMocks
     UnemployeePerson unemployeePerson;
 
+
     /*
      Test Default method in java8 interface
      without implement interface
@@ -37,6 +43,7 @@ public class JobServiceUnitTest {
      */
     @Test
     public void givenDefaultMethod_whenCallRealMethod_thenNoExceptionIsRaised() {
+
         Person person = new Person();
         when(jobService.findCurrentJobPosition(person))
                 .thenReturn(Optional.of(new JobPosition()));
